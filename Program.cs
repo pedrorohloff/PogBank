@@ -7,8 +7,20 @@ using Training.Models;
 List<Pessoa> listaPessoas = new List<Pessoa>();
 var menu = new Menu();
 
+/*
+    
+    TODO adicionar enum para realizar leitura e apresentação do tipo de setor
+    
+    considerar o uso de dictionary para armazenar o valor do tipo do setor
 
-// TODO adicionar enum para realizar leitura e apresentação do tipo de setor
+    Dictionary<int, string> setores = new Dictionary<int, string>();
+
+    setores.Add(1 , "Atendimento")
+    ...
+    
+*/
+
+
 var continuarAtendimento = true;
 do
 {
@@ -64,8 +76,8 @@ do
             int setorSelecionado;
             do
             {
-                validEntry = int.TryParse(Console.ReadLine(), out setorSelecionado);            
-            } while(!validEntry);
+                validEntry = int.TryParse(Console.ReadLine(), out setorSelecionado);
+            } while (!validEntry);
 
             if (setorSelecionado != 5)
             {
