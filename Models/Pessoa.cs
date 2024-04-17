@@ -21,18 +21,52 @@ namespace Training.Models
 
         public static void ListarAtendimentos(List<Pessoa> lista)
         {
+            Dictionary<int, string> setores = new Dictionary<int, string>()
+            {
+
+                {1, "1 - Abertura de Conta"},
+                {2 ,"2 - Caixa"},
+                {3 ,"3 - Gerente Pessoa Física"},
+                {4 ,"4 - Gerente Pessoa Jurídica"},
+
+            };
+
             foreach (var pessoa in lista)
             {
                 Console.WriteLine($"ID: {pessoa.Id}");
                 Console.WriteLine($"Nome: {pessoa.Nome}");
                 Console.WriteLine($"CPF: {pessoa.Cpf}");
-                Console.WriteLine($"Setor: {pessoa.Setor}");
+                if (pessoa.Setor == 1)
+                {
+                    Console.WriteLine($"Setor: {setores[1]}");
+                }
+                else if (pessoa.Setor == 2)
+                {
+                    Console.WriteLine($"Setor: {setores[2]}");
+                }
+                else if (pessoa.Setor == 3)
+                {
+                    Console.WriteLine($"Setor: {setores[3]}");
+                }
+                else if (pessoa.Setor == 4)
+                {
+                    Console.WriteLine($"Setor: {setores[4]}");
+                }
                 Console.WriteLine();
             }
         }
 
         public static void ListarAtendimentosPorSetor(List<Pessoa> listaPessoas, int setorSelecionado)
         {
+            Dictionary<int, string> setores = new Dictionary<int, string>()
+            {
+
+                {1, "1 - Abertura de Conta"},
+                {2 ,"2 - Caixa"},
+                {3 ,"3 - Gerente Pessoa Física"},
+                {4 ,"4 - Gerente Pessoa Jurídica"},
+
+            };
             Console.WriteLine($"Atendimentos do setor {setorSelecionado}");
             foreach (var pessoa in listaPessoas)
             {
@@ -41,7 +75,23 @@ namespace Training.Models
                     Console.WriteLine($"ID: {pessoa.Id}");
                     Console.WriteLine($"Nome: {pessoa.Nome}");
                     Console.WriteLine($"CPF: {pessoa.Cpf}");
-                    Console.WriteLine($"Setor: {pessoa.Setor}");
+                    if (pessoa.Setor == 1)
+                    {
+                        Console.WriteLine($"Setor: {setores[1]}");
+                    }
+                    else if (pessoa.Setor == 2)
+                    {
+                        Console.WriteLine($"Setor: {setores[2]}");
+                    }
+                    else if (pessoa.Setor == 3)
+                    {
+                        Console.WriteLine($"Setor: {setores[3]}");
+                    }
+                    else if (pessoa.Setor == 4)
+                    {
+                        Console.WriteLine($"Setor: {setores[4]}");
+                    }
+                    Console.WriteLine();
                 }
             }
         }
